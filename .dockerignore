@@ -23,7 +23,7 @@ server
 build/
 
 # Docker
-Dockerfile
+# Dockerfile
 .dockerignore
 docker/
 
