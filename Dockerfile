@@ -13,6 +13,7 @@ COPY go.mod go.sum ./
 COPY whatsmeow-lib/ ./whatsmeow-lib/
 RUN go mod download
 COPY . .
+RUN ls -la /build
 ARG VERSION=dev
 RUN CGO_ENABLED=1 go build -ldflags "-X main.version=${VERSION}" -o server .
 
