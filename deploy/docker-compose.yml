@@ -11,9 +11,11 @@
 name: evolution-go
 services:
   evolution-go:
-    build:
-      context: .
-      dockerfile: ../Dockerfile
+   build:
+      context: ..
+      dockerfile: Dockerfile
+      args:
+        VERSION: ${APP_VERSION:-custom}
       args:
         VERSION: ${APP_VERSION:-custom}
     image: evolution-go-custom:local
